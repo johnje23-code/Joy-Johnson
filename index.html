@@ -112,10 +112,45 @@
       border-radius: 2px;
       background: rgba(181,196,177,0.12);
     }
+    .hero-quote-wrap {
+      position: absolute;
+      bottom: 2.5rem; left: 2.5rem; right: 2.5rem;
+      z-index: 2;
+      opacity: 0; animation: fadeUp 0.8s 1.3s forwards;
+    }
+    .hero-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 300; font-style: italic;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+    .hero-quote::before {
+      content: '\201C';
+      font-size: 1.4em; line-height: 0;
+      vertical-align: -0.35em;
+      margin-right: 0.05em;
+      opacity: 0.7;
+    }
+    .hero-quote::after {
+      content: '\201D';
+      font-size: 1.4em; line-height: 0;
+      vertical-align: -0.35em;
+      margin-left: 0.05em;
+      opacity: 0.7;
+    }
+    .hero-quote-attribution {
+      margin-top: 0.75rem;
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--dusk);
+    }
+    .hero-quote-attribution::before {
+      content: '— ';
+    }
     .hero-right {
       position: relative; overflow: hidden;
     }
-    .hero-bg-shape {
       position: absolute; inset: 0;
       background: linear-gradient(135deg, #8db5ba 0%, #c2d8db 50%, var(--cream) 100%);
     }
@@ -317,9 +352,48 @@
     #artifacts {
       background: var(--cream);
     }
+    .artifacts-subsection {
+      margin-top: 3.5rem;
+    }
+    .subsection-label {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--sage-dark);
+      margin-bottom: 0.6rem;
+    }
+    .subsection-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 300; line-height: 1.2;
+      color: var(--text-dark); margin-bottom: 0.5rem;
+    }
+    .subsection-title em { font-style: italic; color: var(--sage-dark); }
+    .subsection-desc {
+      font-size: 0.88rem; line-height: 1.75; color: var(--text-mid);
+      max-width: 680px; margin-bottom: 2rem;
+    }
+    .objective-group {
+      margin-bottom: 2.5rem;
+    }
+    .objective-header {
+      display: flex; align-items: baseline; gap: 1rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--sage-light);
+    }
+    .objective-number {
+      font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--clay);
+      flex-shrink: 0;
+      padding: 0.25rem 0.7rem;
+      background: var(--clay-light);
+      border-radius: 2px;
+    }
+    .objective-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem; font-weight: 400;
+      color: var(--text-mid); font-style: italic;
+    }
     .artifacts-grid {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
-      margin-top: 3rem;
     }
     .artifact-card {
       background: var(--warm-white);
@@ -351,6 +425,10 @@
       background: var(--clay-light);
       border-radius: 2px;
     }
+    .artifact-tag.sage {
+      color: var(--dusk);
+      background: var(--sage-light);
+    }
     .artifact-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.2rem; font-weight: 400;
@@ -365,6 +443,48 @@
       border-top: 1px dashed var(--clay-light);
       font-size: 0.75rem; color: var(--text-light);
       font-style: italic;
+    }
+    .professional-practice-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .practice-card {
+      background: var(--warm-white);
+      padding: 2rem;
+      border: 1px solid var(--sage-light);
+      border-left: 3px solid var(--sage-dark);
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .practice-card:hover {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+    }
+    .practice-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 400;
+      color: var(--text-dark); margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .practice-card-desc {
+      font-size: 0.82rem; line-height: 1.7; color: var(--text-mid);
+      margin-bottom: 1.25rem;
+    }
+    .practice-card-placeholder {
+      padding-top: 1.25rem;
+      border-top: 1px dashed var(--sage-light);
+      font-size: 0.75rem; color: var(--text-light);
+      font-style: italic;
+    }
+    .section-divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, var(--sage-light), transparent);
+      margin: 3rem 0;
+    }
+
+    @media (max-width: 900px) {
+      .professional-practice-grid { grid-template-columns: 1fr; }
     }
 
     /* ── FOOTER ── */
@@ -406,6 +526,7 @@
       .goals-timeline { grid-template-columns: 1fr; }
       .goals-timeline::before { display: none; }
       .artifacts-grid { grid-template-columns: 1fr; }
+      .professional-practice-grid { grid-template-columns: 1fr; }
       nav { padding: 1.2rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
       section { padding: 4rem 1.5rem; }
@@ -436,7 +557,7 @@
       <div class="hero-divider"></div>
       <p class="hero-tagline">LCMHCA Candidate &nbsp;·&nbsp; NC</p>
       <p class="hero-statement">
-        I believe that change is possible, <strong style="color:#5e9198;">always</strong>. Therapy offers a sacred space where relief, clarity, connection, and growth can take root.
+        Therapy offers a sacred space where relief, clarity, connection, and growth can take root.
       </p>
       <div class="hero-pillars">
         <span class="pillar">Relief</span>
@@ -449,6 +570,10 @@
       <div class="hero-bg-shape"></div>
       <div class="hero-circle hero-circle-1"></div>
       <div class="hero-circle hero-circle-2"></div>
+      <div class="hero-quote-wrap">
+        <p class="hero-quote">I believe that change is possible, always.</p>
+        <p class="hero-quote-attribution">Joy Johnson</p>
+      </div>
 
     </div>
   </section>
@@ -561,44 +686,259 @@
   <section id="artifacts">
     <p class="section-label">Portfolio</p>
     <h2 class="section-title">Portfolio <em>Artifacts</em></h2>
-    <div class="artifacts-grid">
-      <div class="artifact-card">
-        <span class="artifact-tag">Clinical Philosophy</span>
-        <h3 class="artifact-title">Personal Theory of Counseling</h3>
-        <p class="artifact-desc">A reflective exploration of my theoretical orientation, core beliefs about the therapeutic relationship, and the values that guide my clinical practice.</p>
-        <p class="artifact-placeholder">Document will be added here.</p>
+
+    <!-- SUBSECTION 1: Portfolio Artifacts by Program Objective -->
+    <div class="artifacts-subsection">
+      <p class="subsection-label">Subsection I</p>
+      <h3 class="subsection-title">Portfolio Artifacts by <em>Program Objective</em></h3>
+      <p class="subsection-desc">
+        The following artifacts are organized by the five core program objectives of my graduate training. Each objective is represented by three artifacts that demonstrate competency, growth, and professional development across the domains of ethical practice, lifelong learning, community leadership, self-awareness, and compassionate service.
+      </p>
+
+      <!-- Objective 1 -->
+      <div class="objective-group">
+        <div class="objective-header">
+          <span class="objective-number">Objective 1</span>
+          <span class="objective-title">Acquire knowledge and skills to practice effectively and ethically.</span>
+        </div>
+        <div class="artifacts-grid">
+          <div class="artifact-card">
+            <span class="artifact-tag">Clinical Philosophy</span>
+            <h3 class="artifact-title">Personal Theory of Counseling</h3>
+            <p class="artifact-desc">A reflective exploration of my theoretical orientation, core beliefs about the therapeutic relationship, and the values that guide my clinical practice.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+          <div class="artifact-card">
+            <span class="artifact-tag">Coursework</span>
+            <h3 class="artifact-title">Case Conceptualization</h3>
+            <p class="artifact-desc">A demonstration of my ability to integrate clinical theory, cultural considerations, and presenting concerns into a coherent, client-centered treatment framework.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+          <div class="artifact-card">
+            <span class="artifact-tag">Professional Document</span>
+            <h3 class="artifact-title">Professional Disclosure Statement</h3>
+            <p class="artifact-desc">A comprehensive client-facing document outlining my credentials, approach, confidentiality, and the informed consent process as required by the NCBLCMHC.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+        </div>
       </div>
-      <div class="artifact-card">
-        <span class="artifact-tag">Professional Document</span>
-        <h3 class="artifact-title">Professional Disclosure Statement</h3>
-        <p class="artifact-desc">A comprehensive client-facing document outlining my credentials, approach, confidentiality, and the informed consent process as required by the NCBLCMHC.</p>
-        <p class="artifact-placeholder">Document will be added here.</p>
+
+      <!-- Objective 2 -->
+      <div class="objective-group">
+        <div class="objective-header">
+          <span class="objective-number">Objective 2</span>
+          <span class="objective-title">Value professional diligence and life-long learning.</span>
+        </div>
+        <div class="artifacts-grid">
+          <div class="artifact-card">
+            <span class="artifact-tag">Professional Goals</span>
+            <h3 class="artifact-title">Professional Development Plan</h3>
+            <p class="artifact-desc">A structured roadmap outlining my clinical goals at graduation, one year, and three years — grounded in my specialization in adults, older adults, and grief-informed care.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+          <div class="artifact-card">
+            <span class="artifact-tag">Continuing Education</span>
+            <h3 class="artifact-title">Continuing Education Reflection</h3>
+            <p class="artifact-desc">A reflective account of training pursued beyond required coursework, documenting the pursuit of emerging knowledge and specialized skills in clinical mental health counseling.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+          <div class="artifact-card">
+            <span class="artifact-tag">Professional Identity</span>
+            <h3 class="artifact-title">Counselor Identity Paper</h3>
+            <p class="artifact-desc">A narrative exploration of my developing professional identity, tracing the integration of personal values, training experiences, and emerging clinical philosophy across my program of study.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+        </div>
       </div>
-      <div class="artifact-card">
-        <span class="artifact-tag">Coursework</span>
-        <h3 class="artifact-title">Case Conceptualization</h3>
-        <p class="artifact-desc">A demonstration of my ability to integrate clinical theory, cultural considerations, and presenting concerns into a coherent, client-centered treatment framework.</p>
-        <p class="artifact-placeholder">Document will be added here.</p>
+
+      <!-- Objective 3 -->
+      <div class="objective-group">
+        <div class="objective-header">
+          <span class="objective-number">Objective 3</span>
+          <span class="objective-title">Excel as community leaders, advocates, and practitioners.</span>
+        </div>
+        <div class="artifacts-grid">
+          <div class="artifact-card">
+            <span class="artifact-tag">Advocacy</span>
+            <h3 class="artifact-title">Community Mental Health Advocacy Project</h3>
+            <p class="artifact-desc">A project demonstrating advocacy skills through community needs assessment, stakeholder engagement, and the development of a proposal to address identified gaps in mental health access.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+          <div class="artifact-card">
+            <span class="artifact-tag">Leadership</span>
+            <h3 class="artifact-title">Group Facilitation Leadership Reflection</h3>
+            <p class="artifact-desc">A reflective analysis of my experience facilitating a counseling or psychoeducational group, examining leadership style, group dynamics, and the cultivation of therapeutic community.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+          <div class="artifact-card">
+            <span class="artifact-tag">Community Practice</span>
+            <h3 class="artifact-title">Consultation and Collaboration Paper</h3>
+            <p class="artifact-desc">An examination of interdisciplinary consultation and collaboration in clinical practice, demonstrating competency in working within systems to serve clients effectively and advocate for their well-being.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+        </div>
       </div>
-      <div class="artifact-card">
-        <span class="artifact-tag">Self-Reflection</span>
-        <h3 class="artifact-title">Multicultural Counseling Reflection</h3>
-        <p class="artifact-desc">A critical self-examination of cultural identity, privilege, and bias as they relate to counselor development and culturally responsive practice.</p>
-        <p class="artifact-placeholder">Document will be added here.</p>
+
+      <!-- Objective 4 -->
+      <div class="objective-group">
+        <div class="objective-header">
+          <span class="objective-number">Objective 4</span>
+          <span class="objective-title">Possess a deep awareness of themselves and of their impact on others.</span>
+        </div>
+        <div class="artifacts-grid">
+          <div class="artifact-card">
+            <span class="artifact-tag">Self-Reflection</span>
+            <h3 class="artifact-title">Multicultural Counseling Reflection</h3>
+            <p class="artifact-desc">A critical self-examination of cultural identity, privilege, and bias as they relate to counselor development and culturally responsive practice.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+          <div class="artifact-card">
+            <span class="artifact-tag">Supervision</span>
+            <h3 class="artifact-title">Supervision Reflective Journal</h3>
+            <p class="artifact-desc">A curated selection of journal entries from clinical supervision, documenting evolving self-awareness, countertransference exploration, and the integration of feedback into practice.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+          <div class="artifact-card">
+            <span class="artifact-tag">Personal Growth</span>
+            <h3 class="artifact-title">Personal Counseling Experience Reflection</h3>
+            <p class="artifact-desc">A thoughtful reflection on the personal growth gained through my own counseling experience, exploring how self-understanding deepens empathy, presence, and therapeutic effectiveness.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+        </div>
       </div>
-      <div class="artifact-card">
-        <span class="artifact-tag">Ethics</span>
-        <h3 class="artifact-title">Ethical Decision-Making Paper</h3>
-        <p class="artifact-desc">An applied analysis of an ethical dilemma using a structured decision-making model, demonstrating competency in navigating complex professional and legal standards.</p>
-        <p class="artifact-placeholder">Document will be added here.</p>
+
+      <!-- Objective 5 -->
+      <div class="objective-group">
+        <div class="objective-header">
+          <span class="objective-number">Objective 5</span>
+          <span class="objective-title">Commit to the compassionate service of humanity and foster the well-being of people at the local, state, national, and international level.</span>
+        </div>
+        <div class="artifacts-grid">
+          <div class="artifact-card">
+            <span class="artifact-tag">Service</span>
+            <h3 class="artifact-title">Practicum Site Service Summary</h3>
+            <p class="artifact-desc">A narrative overview of clinical hours and service contributions at practicum placements, highlighting the populations served and the impact of compassionate, evidence-based care across diverse communities.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+          <div class="artifact-card">
+            <span class="artifact-tag">Social Justice</span>
+            <h3 class="artifact-title">Social Justice in Counseling Paper</h3>
+            <p class="artifact-desc">An applied exploration of social justice principles within the counseling profession, addressing systemic barriers to mental health access and the counselor's role in promoting equity at local, national, and global levels.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+          <div class="artifact-card">
+            <span class="artifact-tag">Human Well-Being</span>
+            <h3 class="artifact-title">Wellness Philosophy Statement</h3>
+            <p class="artifact-desc">A personal and professional statement articulating my commitment to a holistic, wellness-oriented approach to counseling — one that honors the full humanity of each client and is anchored in compassion, dignity, and hope.</p>
+            <p class="artifact-placeholder">Document will be added here.</p>
+          </div>
+        </div>
       </div>
-      <div class="artifact-card">
-        <span class="artifact-tag">Professional Goals</span>
-        <h3 class="artifact-title">Professional Development Plan</h3>
-        <p class="artifact-desc">A structured roadmap outlining my clinical goals at graduation, one year, and three years — grounded in my specialization in adults, older adults, and grief-informed care.</p>
-        <p class="artifact-placeholder">Document will be added here.</p>
-      </div>
-    </div>
+    </div><!-- end subsection 1 -->
+
+    <div class="section-divider"></div>
+
+    <!-- SUBSECTION 2: Artifacts Pertinent to Professional Practice -->
+    <div class="artifacts-subsection">
+      <p class="subsection-label">Subsection II</p>
+      <h3 class="subsection-title">Artifacts Pertinent to <em>Professional Practice</em></h3>
+      <p class="subsection-desc">
+        The following four areas represent critical competencies in professional mental health practice. Each section highlights targeted training, applied work, and reflective scholarship in domains central to safe, ethical, and effective clinical service.
+      </p>
+
+      <div class="professional-practice-grid">
+
+        <!-- Suicide Assessment and Intervention -->
+        <div class="practice-card">
+          <h3 class="practice-card-title">Suicide Assessment &amp; Intervention</h3>
+          <p class="practice-card-desc">
+            Competency in suicide risk assessment and evidence-based intervention is a foundational requirement of ethical clinical practice. This section contains artifacts documenting my training, skill development, and applied understanding of safety planning, risk stratification, and crisis counseling protocols.
+          </p>
+          <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+            <div class="artifact-card">
+              <span class="artifact-tag sage">Training & Certification</span>
+              <h3 class="artifact-title">Applied Suicide Intervention Skills Training (ASIST)</h3>
+              <p class="artifact-desc">Documentation of completion of ASIST or equivalent evidence-based suicide intervention training, including reflection on key skills and their application to clinical settings.</p>
+              <p class="artifact-placeholder">Document will be added here.</p>
+            </div>
+            <div class="artifact-card">
+              <span class="artifact-tag sage">Clinical Competency</span>
+              <h3 class="artifact-title">Safety Planning Case Example</h3>
+              <p class="artifact-desc">A de-identified case example illustrating the development and implementation of a collaborative safety plan, demonstrating clinical judgment, risk assessment skills, and client-centered crisis intervention.</p>
+              <p class="artifact-placeholder">Document will be added here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ethical Decision-Making -->
+        <div class="practice-card">
+          <h3 class="practice-card-title">Ethical Decision-Making</h3>
+          <p class="practice-card-desc">
+            Sound ethical reasoning is the cornerstone of professional counseling. This section presents artifacts that demonstrate my understanding of the ACA Code of Ethics, my ability to navigate complex ethical dilemmas, and my commitment to making decisions that protect client welfare and uphold the integrity of the profession.
+          </p>
+          <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+            <div class="artifact-card">
+              <span class="artifact-tag">Ethics</span>
+              <h3 class="artifact-title">Ethical Decision-Making Paper</h3>
+              <p class="artifact-desc">An applied analysis of an ethical dilemma using a structured decision-making model, demonstrating competency in navigating complex professional and legal standards.</p>
+              <p class="artifact-placeholder">Document will be added here.</p>
+            </div>
+            <div class="artifact-card">
+              <span class="artifact-tag">Ethics</span>
+              <h3 class="artifact-title">Ethics in Supervision Reflection</h3>
+              <p class="artifact-desc">A reflective paper examining an ethically complex situation encountered in practicum, exploring the decision-making process, supervisory consultation, and the professional growth that resulted.</p>
+              <p class="artifact-placeholder">Document will be added here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trauma-Informed Clinical Practice -->
+        <div class="practice-card">
+          <h3 class="practice-card-title">Trauma-Informed Clinical Practice</h3>
+          <p class="practice-card-desc">
+            Trauma permeates the presenting concerns of many clients across all settings. This section documents my foundational and applied understanding of trauma-informed care principles — including safety, trustworthiness, empowerment, and cultural sensitivity — and their integration into assessment, treatment planning, and the therapeutic relationship.
+          </p>
+          <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+            <div class="artifact-card">
+              <span class="artifact-tag sage">Clinical Framework</span>
+              <h3 class="artifact-title">Trauma-Informed Care Framework Paper</h3>
+              <p class="artifact-desc">A research-informed paper examining the core principles of trauma-informed care and their application across diverse clinical populations, with attention to the role of the therapeutic relationship in healing.</p>
+              <p class="artifact-placeholder">Document will be added here.</p>
+            </div>
+            <div class="artifact-card">
+              <span class="artifact-tag sage">Applied Practice</span>
+              <h3 class="artifact-title">Trauma-Focused Case Conceptualization</h3>
+              <p class="artifact-desc">A de-identified case conceptualization applying a trauma-informed lens to assessment and treatment planning, integrating an understanding of trauma responses, resilience, and evidence-based intervention strategies.</p>
+              <p class="artifact-placeholder">Document will be added here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Positive Psychotherapy Interventions -->
+        <div class="practice-card">
+          <h3 class="practice-card-title">Positive Psychotherapy Interventions</h3>
+          <p class="practice-card-desc">
+            Strength-based and positive psychotherapy approaches complement traditional clinical models by cultivating well-being, meaning, and flourishing alongside symptom reduction. This section showcases my competency in integrating positive psychology principles and evidence-based interventions — such as gratitude practices, values clarification, and meaning-making — into therapeutic work.
+          </p>
+          <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+            <div class="artifact-card">
+              <span class="artifact-tag">Strength-Based</span>
+              <h3 class="artifact-title">Positive Psychology Intervention Design</h3>
+              <p class="artifact-desc">A designed and evaluated positive psychotherapy intervention — such as a values clarification exercise, gratitude practice, or strengths inventory — with a rationale grounded in empirical research and clinical theory.</p>
+              <p class="artifact-placeholder">Document will be added here.</p>
+            </div>
+            <div class="artifact-card">
+              <span class="artifact-tag">Strength-Based</span>
+              <h3 class="artifact-title">Positive Psychotherapy Reflection Paper</h3>
+              <p class="artifact-desc">A reflective paper exploring the integration of positive psychotherapy approaches within a broader integrative clinical framework, examining both the research base and personal resonance of these interventions.</p>
+              <p class="artifact-placeholder">Document will be added here.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end professional-practice-grid -->
+    </div><!-- end subsection 2 -->
+
   </section>
 
   <!-- FOOTER -->
