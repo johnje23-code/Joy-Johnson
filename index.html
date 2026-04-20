@@ -394,6 +394,7 @@
     }
     .artifacts-grid {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+      align-items: stretch;
     }
     .artifact-card {
       background: var(--warm-white);
@@ -402,6 +403,7 @@
       cursor: pointer;
       transition: all 0.3s;
       position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
     }
     .artifact-card::before {
       content: '';
@@ -437,6 +439,7 @@
     }
     .artifact-desc {
       font-size: 0.82rem; line-height: 1.7; color: var(--text-light);
+      flex-grow: 1;
     }
     .artifact-placeholder {
       margin-top: 1.5rem; padding-top: 1.5rem;
@@ -557,7 +560,7 @@
       <div class="hero-divider"></div>
       <p class="hero-tagline">LCMHCA Candidate &nbsp;·&nbsp; NC</p>
       <p class="hero-statement">
-        Therapy offers a sacred space where relief, clarity, connection, and growth can take root.
+        Therapy is a supportive space where relief, clarity, connection, and growth can take root.
       </p>
       <div class="hero-pillars">
         <span class="pillar">Relief</span>
@@ -593,7 +596,7 @@
         At the heart of my approach is a deep and abiding belief that <strong>change is possible</strong> — regardless of where someone is starting from. I view therapy as a collaborative, empowering process in which clients are the experts on their own lives. My practice is grounded in <strong>person-centered and strength-based principles</strong>, honoring each client's inherent resilience, wisdom, and capacity for growth. My role is to walk alongside them, offering a space that is safe, nonjudgmental, and oriented toward healing.
       </p>
       <p class="about-text">
-        I draw on an integrative toolkit of evidence-based approaches — including <strong>Cognitive Behavioral Therapy (CBT)</strong>, <strong>Acceptance and Commitment Therapy (ACT)</strong>, <strong>Narrative Therapy</strong>, and <strong>Motivational Interviewing (MI)</strong> — tailoring techniques to meet each client where they are and in alignment with their unique goals, values, and lived experience.
+        I draw on an integrative toolkit of evidence-based approaches — including <strong>Narrative Therapy</strong>, <strong>Motivational Interviewing (MI)</strong>, <strong>Cognitive Behavioral Therapy (CBT)</strong>, and <strong>Acceptance and Commitment Therapy (ACT)</strong> — tailoring techniques to meet each client where they are and in alignment with their unique goals, values, and lived experience.
       </p>
       <p class="about-text">
         I am committed to culturally responsive, evidence-informed practice and to building therapeutic relationships rooted in trust, warmth, and genuine care.
@@ -601,10 +604,10 @@
       <div class="about-modalities">
         <p class="modalities-label">Therapeutic Approaches</p>
         <div class="modality-tags">
-          <span class="modality-tag">Cognitive Behavioral Therapy (CBT)</span>
-          <span class="modality-tag">Acceptance & Commitment Therapy (ACT)</span>
           <span class="modality-tag">Narrative Therapy</span>
           <span class="modality-tag">Motivational Interviewing (MI)</span>
+          <span class="modality-tag">Cognitive Behavioral Therapy (CBT)</span>
+          <span class="modality-tag">Acceptance & Commitment Therapy (ACT)</span>
         </div>
       </div>
       <div class="about-values">
@@ -689,7 +692,6 @@
 
     <!-- SUBSECTION 1: Portfolio Artifacts by Program Objective -->
     <div class="artifacts-subsection">
-      <p class="subsection-label">Subsection I</p>
       <h3 class="subsection-title">Portfolio Artifacts by <em>Program Objective</em></h3>
       <p class="subsection-desc">
         The following artifacts are organized by the five core program objectives of my graduate training. Each objective is represented by three artifacts that demonstrate competency, growth, and professional development across the domains of ethical practice, lifelong learning, community leadership, self-awareness, and compassionate service.
@@ -703,22 +705,40 @@
         </div>
         <div class="artifacts-grid">
           <div class="artifact-card">
-            <span class="artifact-tag">Clinical Philosophy</span>
-            <h3 class="artifact-title">Personal Theory of Counseling</h3>
-            <p class="artifact-desc">A reflective exploration of my theoretical orientation, core beliefs about the therapeutic relationship, and the values that guide my clinical practice.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Diagnosis & Treatment Plan</span>
+            <h3 class="artifact-title">Case Study of Crystal Smith</h3>
+            <p class="artifact-desc">An eight-page case study of a hypothetical client with Major Depressive Disorder, including diagnostic justification and treatment plan based on the DO A CLIENT MAP framework. This artifact demonstrates my ability to assess, diagnose, conceptualize a client case, and develop a treatment plan. Each of these skills is essential to clinical practice.</p>
+            <a class="resume-link" href="Case_Study_Crystal_Smith.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Case Study
+            </a>
           </div>
           <div class="artifact-card">
-            <span class="artifact-tag">Coursework</span>
-            <h3 class="artifact-title">Case Conceptualization</h3>
-            <p class="artifact-desc">A demonstration of my ability to integrate clinical theory, cultural considerations, and presenting concerns into a coherent, client-centered treatment framework.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Research</span>
+            <h3 class="artifact-title">Abstinence vs. Controlled Drinking Research Paper</h3>
+            <p class="artifact-desc">A nine-page research paper exploring the efficacy of abstinence-based versus controlled drinking treatment approaches for clients with alcohol use disorder. This artifact demonstrates my ability to review, synthesize, and evaluate literature to inform evidence-based practice in support of effective and ethical practice.</p>
+            <a class="resume-link" href="Abstinence_Controlled_Drinking.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Research Paper
+            </a>
           </div>
           <div class="artifact-card">
-            <span class="artifact-tag">Professional Document</span>
-            <h3 class="artifact-title">Professional Disclosure Statement</h3>
-            <p class="artifact-desc">A comprehensive client-facing document outlining my credentials, approach, confidentiality, and the informed consent process as required by the NCBLCMHC.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Assessment</span>
+            <h3 class="artifact-title">The Mini-Mental State Examination Research Paper</h3>
+            <p class="artifact-desc">A thirteen-page research paper exploring the psychometric properties and multicultural, ethical, and legal considerations of the Mini-Mental State Examination. This artifact demonstrates my ability to research and evaluate the psychometric properties of an assessment instrument. In addition, this artifact shows my ability to consider the multicultural, ethical, and legal implications when assessing an instrument for possible administration to a client.</p>
+            <a class="resume-link" href="MMSE.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Research Paper
+            </a>
           </div>
         </div>
       </div>
@@ -731,22 +751,40 @@
         </div>
         <div class="artifacts-grid">
           <div class="artifact-card">
-            <span class="artifact-tag">Professional Goals</span>
-            <h3 class="artifact-title">Professional Development Plan</h3>
-            <p class="artifact-desc">A structured roadmap outlining my clinical goals at graduation, one year, and three years — grounded in my specialization in adults, older adults, and grief-informed care.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Law & Ethics</span>
+            <h3 class="artifact-title">NC Legal Requirements</h3>
+            <p class="artifact-desc">A twelve-page research paper on legal requirements pertaining to confidentiality, mandated reporting, and the duty to warn for counselors practicing in the state of North Carolina. This artifact demonstrates professional diligence, highlighting my ability to identify, understand, and summarize legal and ethical requirements.</p>
+            <a class="resume-link" href="Legal_Requirements.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Research Paper
+            </a>
           </div>
           <div class="artifact-card">
-            <span class="artifact-tag">Continuing Education</span>
-            <h3 class="artifact-title">Continuing Education Reflection</h3>
-            <p class="artifact-desc">A reflective account of training pursued beyond required coursework, documenting the pursuit of emerging knowledge and specialized skills in clinical mental health counseling.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Poster Presentation</span>
+            <h3 class="artifact-title">Affect and Avoidant Personality Disorder Poster Presentation</h3>
+            <p class="artifact-desc">A poster presentation summarizing literature review research on the relationship between affect and avoidant personality disorder. This artifact demonstrates my ability to conduct research and communicate findings to others in a summarized and visually effective format. This poster showcases skills relevant to both professional diligence and lifelong learning, as conducting and sharing research is essential to both.</p>
+            <a class="resume-link" href="Poster.pptx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Poster Presentation
+            </a>
           </div>
           <div class="artifact-card">
-            <span class="artifact-tag">Professional Identity</span>
-            <h3 class="artifact-title">Counselor Identity Paper</h3>
-            <p class="artifact-desc">A narrative exploration of my developing professional identity, tracing the integration of personal values, training experiences, and emerging clinical philosophy across my program of study.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Couples Counseling</span>
+            <h3 class="artifact-title">Reflections on <em>The Seven Principles for Making Marriage Work</em></h3>
+            <p class="artifact-desc">A six-page paper summarizing and reflecting on John Gottman's "Love Lab" research and seven principles to inform couples counseling. This artifact demonstrates my ability to summarize and integrate relational research findings to inform evidence-based practice using a prevention and wellness-based approach. These skills are critical to professional diligence and lifelong learning.</p>
+            <a class="resume-link" href="Seven_Principles.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Paper
+            </a>
           </div>
         </div>
       </div>
@@ -759,22 +797,40 @@
         </div>
         <div class="artifacts-grid">
           <div class="artifact-card">
-            <span class="artifact-tag">Advocacy</span>
-            <h3 class="artifact-title">Community Mental Health Advocacy Project</h3>
-            <p class="artifact-desc">A project demonstrating advocacy skills through community needs assessment, stakeholder engagement, and the development of a proposal to address identified gaps in mental health access.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Consultation</span>
+            <h3 class="artifact-title">Consultee-Centered Mental Health Case Consultation</h3>
+            <p class="artifact-desc">A seven-page case study involving a hypothetical consultee-centered client mental health consultation. The case study includes a proposed consultation model and implementation plan for a client seeking to develop her clinical competency in treating adolescent self-harm. This artifact demonstrates my consultation planning skills, a critical competency for serving as a community leader promoting clinician development.</p>
+            <a class="resume-link" href="Consultation.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Case Study
+            </a>
           </div>
           <div class="artifact-card">
-            <span class="artifact-tag">Leadership</span>
-            <h3 class="artifact-title">Group Facilitation Leadership Reflection</h3>
-            <p class="artifact-desc">A reflective analysis of my experience facilitating a counseling or psychoeducational group, examining leadership style, group dynamics, and the cultivation of therapeutic community.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Prevention Workshop</span>
+            <h3 class="artifact-title">Emotional Regulation Workshop</h3>
+            <p class="artifact-desc">A program plan for a four-session workshop on emotional regulation for adults, including workshop goals, objectives, methods, and resources. This artifact demonstrates my ability to develop a prevention-oriented workshop plan to address community needs using a modality that serves the community in a time-efficient and cost-effective format.</p>
+            <a class="resume-link" href="Workshop.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Workshop Plan
+            </a>
           </div>
           <div class="artifact-card">
-            <span class="artifact-tag">Community Practice</span>
-            <h3 class="artifact-title">Consultation and Collaboration Paper</h3>
-            <p class="artifact-desc">An examination of interdisciplinary consultation and collaboration in clinical practice, demonstrating competency in working within systems to serve clients effectively and advocate for their well-being.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Multiculturalism</span>
+            <h3 class="artifact-title">Reactions to <em>A Class Divided</em>: Multiculturalism and Social Justice in Counseling</h3>
+            <p class="artifact-desc">A five-page reflection paper exploring systemic inequities, multicultural considerations, and social justice in the counseling process. This artifact demonstrates my growing awareness of how cultural and structural factors influence the counseling process, helping me to become a more effective advocate and practitioner.</p>
+            <a class="resume-link" href="Cultural_Reflection.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Reflection Paper
+            </a>
           </div>
         </div>
       </div>
@@ -788,21 +844,39 @@
         <div class="artifacts-grid">
           <div class="artifact-card">
             <span class="artifact-tag">Self-Reflection</span>
-            <h3 class="artifact-title">Multicultural Counseling Reflection</h3>
-            <p class="artifact-desc">A critical self-examination of cultural identity, privilege, and bias as they relate to counselor development and culturally responsive practice.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <h3 class="artifact-title">Personal Statement</h3>
+            <p class="artifact-desc">A one-page personal statement explaining my reasons for pursuing a Master of Arts in counseling at Wake Forest University. This artifact is a strong articulation of my intentionality and interest in the counseling profession and the hope I hold for making a positive impact on others.</p>
+            <a class="resume-link" href="Personal_Statement.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Personal Statement
+            </a>
           </div>
           <div class="artifact-card">
-            <span class="artifact-tag">Supervision</span>
-            <h3 class="artifact-title">Supervision Reflective Journal</h3>
-            <p class="artifact-desc">A curated selection of journal entries from clinical supervision, documenting evolving self-awareness, countertransference exploration, and the integration of feedback into practice.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Professional Growth</span>
+            <h3 class="artifact-title">Internship I Self-Evaluation</h3>
+            <p class="artifact-desc">A six-page self-evaluation paper reflecting on my experiences during my first semester of internship and future development goals. This artifact demonstrates my ability to monitor my development and to identify opportunities for further professional growth.</p>
+            <a class="resume-link" href="Self_Eval.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Self-Evaluation
+            </a>
           </div>
           <div class="artifact-card">
-            <span class="artifact-tag">Personal Growth</span>
-            <h3 class="artifact-title">Personal Counseling Experience Reflection</h3>
-            <p class="artifact-desc">A thoughtful reflection on the personal growth gained through my own counseling experience, exploring how self-understanding deepens empathy, presence, and therapeutic effectiveness.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Cross-Cultural Awareness</span>
+            <h3 class="artifact-title">Cultural Reflections</h3>
+            <p class="artifact-desc">A twelve-page compilation of reflection essays on Coates's article <em>The Case for Reparations</em> and my participation in four cultural immersion activities. This artifact demonstrates my awareness of my cultural context, how that informs my experience when interacting with those from other cultural backgrounds, and my curiosity and openness to cross-cultural experiences.</p>
+            <a class="resume-link" href="Cultural_Reflections.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Cultural Reflections
+            </a>
           </div>
         </div>
       </div>
@@ -815,22 +889,40 @@
         </div>
         <div class="artifacts-grid">
           <div class="artifact-card">
-            <span class="artifact-tag">Service</span>
-            <h3 class="artifact-title">Practicum Site Service Summary</h3>
-            <p class="artifact-desc">A narrative overview of clinical hours and service contributions at practicum placements, highlighting the populations served and the impact of compassionate, evidence-based care across diverse communities.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Ecological Systems</span>
+            <h3 class="artifact-title">Bronfenbrenner's Nested Systems</h3>
+            <p class="artifact-desc">A four-page paper conceptualizing a fictional client's experience from the perspective of Bronfenbrenner's ecological systems theory. This artifact shows my competency in recognizing how clients are shaped by interconnected influences at the individual, community, and policy levels. This multilevel awareness is foundational to compassionate service delivery and the promotion of well-being spanning local, state, national, and international communities.</p>
+            <a class="resume-link" href="Nested_Systems.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Paper
+            </a>
           </div>
           <div class="artifact-card">
-            <span class="artifact-tag">Social Justice</span>
-            <h3 class="artifact-title">Social Justice in Counseling Paper</h3>
-            <p class="artifact-desc">An applied exploration of social justice principles within the counseling profession, addressing systemic barriers to mental health access and the counselor's role in promoting equity at local, national, and global levels.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Groups</span>
+            <h3 class="artifact-title">Prolonged Grief Counseling Group Plan Proposal</h3>
+            <p class="artifact-desc">A twenty-three-page proposal for a counseling group serving young adults experiencing prolonged grief disorder. This artifact showcases a proposal to offer services to improve well-being among the young adult population in the community struggling with prolonged grief.</p>
+            <a class="resume-link" href="Group_Plan.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Group Plan Proposal
+            </a>
           </div>
           <div class="artifact-card">
-            <span class="artifact-tag">Human Well-Being</span>
-            <h3 class="artifact-title">Wellness Philosophy Statement</h3>
-            <p class="artifact-desc">A personal and professional statement articulating my commitment to a holistic, wellness-oriented approach to counseling — one that honors the full humanity of each client and is anchored in compassion, dignity, and hope.</p>
-            <p class="artifact-placeholder">Document will be added here.</p>
+            <span class="artifact-tag">Advocacy</span>
+            <h3 class="artifact-title">Advocacy to Increase Access for Medicare Beneficiaries</h3>
+            <p class="artifact-desc">A four-page paper reflecting on my experience advocating to expand eligibility for Medicare reimbursement to mental health providers with associate licensure. This artifact demonstrates my ability to participate in a national-level advocacy effort to expand Medicare beneficiaries' access to mental health services by increasing clinician eligibility.</p>
+            <a class="resume-link" href="Advocacy.docx" download style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+                <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+              </svg>
+              Download Paper
+            </a>
           </div>
         </div>
       </div>
@@ -840,7 +932,6 @@
 
     <!-- SUBSECTION 2: Artifacts Pertinent to Professional Practice -->
     <div class="artifacts-subsection">
-      <p class="subsection-label">Subsection II</p>
       <h3 class="subsection-title">Artifacts Pertinent to <em>Professional Practice</em></h3>
       <p class="subsection-desc">
         The following four areas represent critical competencies in professional mental health practice. Each section highlights targeted training, applied work, and reflective scholarship in domains central to safe, ethical, and effective clinical service.
@@ -851,21 +942,17 @@
         <!-- Suicide Assessment and Intervention -->
         <div class="practice-card">
           <h3 class="practice-card-title">Suicide Assessment &amp; Intervention</h3>
-          <p class="practice-card-desc">
-            Competency in suicide risk assessment and evidence-based intervention is a foundational requirement of ethical clinical practice. This section contains artifacts documenting my training, skill development, and applied understanding of safety planning, risk stratification, and crisis counseling protocols.
-          </p>
           <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
             <div class="artifact-card">
-              <span class="artifact-tag sage">Training & Certification</span>
-              <h3 class="artifact-title">Applied Suicide Intervention Skills Training (ASIST)</h3>
-              <p class="artifact-desc">Documentation of completion of ASIST or equivalent evidence-based suicide intervention training, including reflection on key skills and their application to clinical settings.</p>
-              <p class="artifact-placeholder">Document will be added here.</p>
-            </div>
-            <div class="artifact-card">
-              <span class="artifact-tag sage">Clinical Competency</span>
-              <h3 class="artifact-title">Safety Planning Case Example</h3>
-              <p class="artifact-desc">A de-identified case example illustrating the development and implementation of a collaborative safety plan, demonstrating clinical judgment, risk assessment skills, and client-centered crisis intervention.</p>
-              <p class="artifact-placeholder">Document will be added here.</p>
+              <span class="artifact-tag sage">Risk Assessment & Safety Plan</span>
+              <h3 class="artifact-title">Suicide and Serious Mental Illness: An Overview of Considerations, Assessment, and Safety Planning</h3>
+              <p class="artifact-desc">This artifact is an excellent resource that summarizes considerations relevant to suicide risk assessment and safety planning. Responding to clients with potential suicidal ideation according to the recommended best practices is essential to promote client safety. This is a critical skill I need to practice ethically and legally in the group practice I hope to join.</p>
+              <a class="resume-link" href="https://sprc.org/wp-content/uploads/SPRC-SMI-Adviser-Suicide-and-Serious-Mental-Illness.pdf" target="_blank" rel="noopener noreferrer" style="margin-top: 1.25rem; display: inline-flex;">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 7.5H12M8.5 4L12 7.5L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                View Resource
+              </a>
             </div>
           </div>
         </div>
@@ -873,21 +960,23 @@
         <!-- Ethical Decision-Making -->
         <div class="practice-card">
           <h3 class="practice-card-title">Ethical Decision-Making</h3>
-          <p class="practice-card-desc">
-            Sound ethical reasoning is the cornerstone of professional counseling. This section presents artifacts that demonstrate my understanding of the ACA Code of Ethics, my ability to navigate complex ethical dilemmas, and my commitment to making decisions that protect client welfare and uphold the integrity of the profession.
-          </p>
           <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
             <div class="artifact-card">
               <span class="artifact-tag">Ethics</span>
-              <h3 class="artifact-title">Ethical Decision-Making Paper</h3>
-              <p class="artifact-desc">An applied analysis of an ethical dilemma using a structured decision-making model, demonstrating competency in navigating complex professional and legal standards.</p>
-              <p class="artifact-placeholder">Document will be added here.</p>
-            </div>
-            <div class="artifact-card">
-              <span class="artifact-tag">Ethics</span>
-              <h3 class="artifact-title">Ethics in Supervision Reflection</h3>
-              <p class="artifact-desc">A reflective paper examining an ethically complex situation encountered in practicum, exploring the decision-making process, supervisory consultation, and the professional growth that resulted.</p>
-              <p class="artifact-placeholder">Document will be added here.</p>
+              <h3 class="artifact-title">Practitioner's Guide to Ethical Decision Making &amp; The ACA Code of Ethics</h3>
+              <p class="artifact-desc">These artifacts are essential references to ensure I am practicing within ethical mandates. The Practitioner's Guide to Ethical Decision Making provides a framework for structuring the decision-making process, which is important for protecting both clients and me as a clinical mental health practitioner. It is also vital to review the ACA Code of Ethics when facing ethical dilemmas and to keep these ethical requirements at the forefront when engaging with my future clients.</p>
+              <a class="resume-link" href="https://www.counseling.org/docs/default-source/ethics/practioner-39-s-guide-to-ethical-decision-making.pdf" target="_blank" rel="noopener noreferrer" style="margin-top: 1.25rem; display: inline-flex;">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 7.5H12M8.5 4L12 7.5L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Practitioner's Guide to Ethical Decision Making
+              </a>
+              <a class="resume-link" href="https://www.counseling.org/docs/default-source/default-document-library/ethics/2014-aca-code-of-ethics.pdf" target="_blank" rel="noopener noreferrer" style="margin-top: 0.75rem; display: inline-flex;">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 7.5H12M8.5 4L12 7.5L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                The ACA Code of Ethics
+              </a>
             </div>
           </div>
         </div>
@@ -895,21 +984,17 @@
         <!-- Trauma-Informed Clinical Practice -->
         <div class="practice-card">
           <h3 class="practice-card-title">Trauma-Informed Clinical Practice</h3>
-          <p class="practice-card-desc">
-            Trauma permeates the presenting concerns of many clients across all settings. This section documents my foundational and applied understanding of trauma-informed care principles — including safety, trustworthiness, empowerment, and cultural sensitivity — and their integration into assessment, treatment planning, and the therapeutic relationship.
-          </p>
           <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
             <div class="artifact-card">
-              <span class="artifact-tag sage">Clinical Framework</span>
-              <h3 class="artifact-title">Trauma-Informed Care Framework Paper</h3>
-              <p class="artifact-desc">A research-informed paper examining the core principles of trauma-informed care and their application across diverse clinical populations, with attention to the role of the therapeutic relationship in healing.</p>
-              <p class="artifact-placeholder">Document will be added here.</p>
-            </div>
-            <div class="artifact-card">
-              <span class="artifact-tag sage">Applied Practice</span>
-              <h3 class="artifact-title">Trauma-Focused Case Conceptualization</h3>
-              <p class="artifact-desc">A de-identified case conceptualization applying a trauma-informed lens to assessment and treatment planning, integrating an understanding of trauma responses, resilience, and evidence-based intervention strategies.</p>
-              <p class="artifact-placeholder">Document will be added here.</p>
+              <span class="artifact-tag sage">Training</span>
+              <h3 class="artifact-title">Foundations of Trauma-Informed Therapy Practices</h3>
+              <p class="artifact-desc">This artifact is a highly informative resource for foundational knowledge about the causes and consequences of trauma, trauma-related disorders, and trauma-informed approaches to clinical care. Unfortunately, even if I do not offer trauma-focused services, the widespread prevalence of trauma necessitates that I have an understanding of how trauma may impact clients and how to respond through a trauma-informed lens, as I will encounter many clients who have experienced or are currently experiencing trauma in my future practice.</p>
+              <a class="resume-link" href="https://courses.elevatece.com/courses/foundations-of-trauma-informed-therapy-practices" target="_blank" rel="noopener noreferrer" style="margin-top: 1.25rem; display: inline-flex;">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 7.5H12M8.5 4L12 7.5L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                View Resource
+              </a>
             </div>
           </div>
         </div>
@@ -917,21 +1002,17 @@
         <!-- Positive Psychotherapy Interventions -->
         <div class="practice-card">
           <h3 class="practice-card-title">Positive Psychotherapy Interventions</h3>
-          <p class="practice-card-desc">
-            Strength-based and positive psychotherapy approaches complement traditional clinical models by cultivating well-being, meaning, and flourishing alongside symptom reduction. This section showcases my competency in integrating positive psychology principles and evidence-based interventions — such as gratitude practices, values clarification, and meaning-making — into therapeutic work.
-          </p>
           <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
             <div class="artifact-card">
               <span class="artifact-tag">Strength-Based</span>
-              <h3 class="artifact-title">Positive Psychology Intervention Design</h3>
-              <p class="artifact-desc">A designed and evaluated positive psychotherapy intervention — such as a values clarification exercise, gratitude practice, or strengths inventory — with a rationale grounded in empirical research and clinical theory.</p>
-              <p class="artifact-placeholder">Document will be added here.</p>
-            </div>
-            <div class="artifact-card">
-              <span class="artifact-tag">Strength-Based</span>
-              <h3 class="artifact-title">Positive Psychotherapy Reflection Paper</h3>
-              <p class="artifact-desc">A reflective paper exploring the integration of positive psychotherapy approaches within a broader integrative clinical framework, examining both the research base and personal resonance of these interventions.</p>
-              <p class="artifact-placeholder">Document will be added here.</p>
+              <h3 class="artifact-title">Positive Psychotherapy: Helping People Thrive</h3>
+              <p class="artifact-desc">This artifact includes demonstrations of eight positive psychotherapy techniques to promote client well-being. This is an excellent resource for broadly applicable interventions to help clients heal and grow. I anticipate many of these interventions will be relevant to the clients I encounter in future practice and are consistent with my strength-based approach to clinical mental health counseling.</p>
+              <a class="resume-link" href="https://video-alexanderstreet-com.wake.idm.oclc.org/watch/positive-psychotherapy-helping-people-thrive?context=channel%3Acounseling-and-therapy-in-video" target="_blank" rel="noopener noreferrer" style="margin-top: 1.25rem; display: inline-flex;">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 7.5H12M8.5 4L12 7.5L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                View Resource
+              </a>
             </div>
           </div>
         </div>
