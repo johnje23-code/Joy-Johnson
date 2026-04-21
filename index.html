@@ -53,6 +53,41 @@
     }
     .nav-links a:hover { color: var(--sage-dark); }
 
+    /* ── NAV DROPDOWN ── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute; top: calc(100% + 0.75rem); right: 0;
+      background: rgba(253,251,248,0.97);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--sage-light);
+      border-radius: 2px;
+      list-style: none;
+      min-width: 230px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      z-index: 200;
+      overflow: hidden;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu li a {
+      display: block;
+      padding: 0.75rem 1.25rem;
+      font-size: 0.74rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-mid);
+      text-decoration: none;
+      transition: background 0.18s, color 0.18s;
+      white-space: nowrap;
+      border-left: 2px solid transparent;
+    }
+    .nav-dropdown-menu li a:hover {
+      background: var(--cream);
+      color: var(--sage-dark);
+      border-left-color: var(--sage);
+    }
+    .nav-dropdown-menu li + li {
+      border-top: 1px solid var(--sage-light);
+    }
+
     /* ── HERO ── */
     #home {
       min-height: 100vh;
@@ -271,6 +306,26 @@
     .modality-tag:hover {
       background: var(--sage-light);
       color: var(--text-dark);
+    }
+
+    /* ── CONTACT ── */
+    .contact-items {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.85rem;
+    }
+    .contact-item {
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      font-size: 0.82rem; font-weight: 400; letter-spacing: 0.04em;
+      color: var(--dusk); text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--sage);
+      border-radius: 2px;
+      background: rgba(141,181,186,0.08);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .contact-item:hover {
+      background: var(--sage-light);
+      color: var(--text-dark);
+      border-color: var(--sage-dark);
     }
 
     /* ── GOALS ── */
@@ -548,7 +603,14 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#goals">Professional Development</a></li>
-      <li><a href="#artifacts">Portfolio</a></li>
+      <li><a href="#article">Influential Article</a></li>
+      <li class="nav-dropdown">
+        <a href="#artifacts">Portfolio</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="#artifacts-objective">Artifacts by Program Objective</a></li>
+          <li><a href="#artifacts-practice">Artifacts Pertinent to Professional Practice</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 
@@ -590,7 +652,7 @@
     </div>
     <div>
       <p class="about-text">
-        I am a <strong>Licensed Clinical Mental Health Counselor Associate (LCMHCA) Candidate</strong> based in North Carolina, completing my graduate training with a focus on serving <strong>adolescents and adults across the lifespan</strong>. My clinical interests include anxiety and depression, chronic illness and aging, grief and loss, addiction, and relationship concerns.
+        I am a <strong>Licensed Clinical Mental Health Counselor Associate (LCMHCA) Candidate</strong> based in North Carolina, anticipating completion of my graduate training in August 2026. My clinical interests include serving clients across the lifespan from adolescence to adult experiencing anxiety and depression, chronic illness and aging, grief and loss, addiction, and relationship concerns.
       </p>
       <p class="about-text">
         At the heart of my approach is a deep and abiding belief that <strong>change is possible</strong> — regardless of where someone is starting from. I view therapy as a collaborative, empowering process in which clients are the experts on their own lives. My practice is grounded in <strong>person-centered and strength-based principles</strong>, honoring each client's inherent resilience, wisdom, and capacity for growth. My role is to walk alongside them, offering a space that is safe, nonjudgmental, and oriented toward healing.
@@ -628,42 +690,31 @@
           <p>Believing in the capacity for meaningful, lasting change at every stage of life.</p>
         </div>
       </div>
+      <div class="about-contact">
+        <p class="modalities-label" style="margin-top: 2rem;">Contact</p>
+        <div class="contact-items">
+          <a href="mailto:johnje23@wfu.edu" class="contact-item">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 3.5A1.5 1.5 0 012.5 2h10A1.5 1.5 0 0114 3.5v8a1.5 1.5 0 01-1.5 1.5h-10A1.5 1.5 0 011 11.5v-8zm1.5-.5a.5.5 0 00-.5.5v.37l5.5 3.96 5.5-3.96V3.5a.5.5 0 00-.5-.5h-10zm10.5 2.13l-4.74 3.41a.5.5 0 01-.52 0L2 5.13V11.5a.5.5 0 00.5.5h10a.5.5 0 00.5-.5V5.13z" fill="currentColor"/>
+            </svg>
+            johnje23@wfu.edu
+          </a>
+          <a href="tel:9807295429" class="contact-item">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.5 1A1.5 1.5 0 003 2.5v.055a3.5 3.5 0 00.04.528l.3 2.1a1.5 1.5 0 01-.387 1.27L1.72 7.686A11.527 11.527 0 006.314 12.28l1.233-1.233a1.5 1.5 0 011.27-.387l2.1.3a3.5 3.5 0 00.528.04H11.5A1.5 1.5 0 0013 9.5v-.078a2.5 2.5 0 00-.317-1.213L11.5 6.5a1 1 0 00-.866-.5H9.5a1 1 0 00-.707.293L8 7.086A8.53 8.53 0 016.914 6 8.53 8.53 0 015.914 4.5l.793-.793A1 1 0 007 2.914V1.866A1 1 0 006 .866 1.5 1.5 0 004.5 1z" fill="currentColor"/>
+            </svg>
+            980-729-5429
+          </a>
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- GOALS -->
   <section id="goals">
     <p class="section-label">Professional Development</p>
     <h2 class="section-title">A roadmap for <em>growth</em></h2>
-    <p class="goals-intro">
-      My professional goals reflect a commitment to intentional, values-driven development as I move from graduate training into clinical practice and toward independent licensure.
+    <p class="goals-intro" style="max-width: 860px;">
+      After graduation, I plan to practice clinically at an established group practice. To be eligible to do so, I will finalize my application for my associate licensure with the NC Board of Licensed Clinical Mental Health Counselors upon conferral of my degree. I will also seek employment opportunities that will allow me to work with diverse client populations and expose me to a network of experienced mental health clinicians from whom I can learn. My goal for my first year of practice is to increase my clinical competency by identifying and pursuing continuing education in focused areas of professional interest and by integrating feedback from my supervisor. Some potential areas for continuing education I am considering include motivational interviewing, EMDR, and dialectical behavior therapy. However, I want to learn from my first year of clinical practice to determine what skills would be most relevant to my work moving forward. By year three, my goal is to begin to solidify my professional identity as a fully licensed clinical mental health counselor. I envision myself as a generalist, treating clients across a broad range of presenting concerns. However, I would also like to cultivate specialized expertise in a few select areas, allowing me to practice with both depth and breadth. As of now, two populations of interest are older adults and those with disabilities. If this interest persists, I will pursue Medicare credentialing once I obtain my LCMHC license so that I can serve these populations. However, I want to learn more about myself and community needs during my first three years of general practice before honing in precisely on areas of specialization.
     </p>
-    <div class="goals-timeline">
-      <div class="goal-card">
-        <div class="goal-dot"></div>
-        <p class="goal-period">At Graduation</p>
-        <h3 class="goal-title">Obtain Associate Licensure & Enter Group Practice</h3>
-        <p class="goal-desc">
-          After receiving my degree, my goal is to practice clinically at an established group practice. To do so, I will finalize my application for associate licensure with the NC Board of Licensed Clinical Mental Health Counselors and seek employment opportunities that allow me to work with diverse client populations and connect me with a network of experienced mental health clinicians from whom I can learn.
-        </p>
-      </div>
-      <div class="goal-card">
-        <div class="goal-dot"></div>
-        <p class="goal-period">After One Year</p>
-        <h3 class="goal-title">Build Clinical Competency Through Focused Growth</h3>
-        <p class="goal-desc">
-          My goal for my first year of practice is to increase my clinical competency by identifying and pursuing continuing education in focused areas of professional interest. Potential areas I am considering include Motivational Interviewing, EMDR, and Dialectical Behavior Therapy — though I want to learn from my first year of clinical practice to determine what skills would be most relevant to my work moving forward.
-        </p>
-      </div>
-      <div class="goal-card">
-        <div class="goal-dot"></div>
-        <p class="goal-period">After Three Years</p>
-        <h3 class="goal-title">Solidify Professional Identity as a Licensed Clinician</h3>
-        <p class="goal-desc">
-          By year three, my goal is to begin solidifying my professional identity as a fully licensed clinical mental health counselor. Although I see my future self as a generalist, I would like to develop expertise in a few specialized areas — including older adults and those with disabilities. If this interest persists, I will pursue Medicare credentialing upon obtaining my LCMHC to serve these populations. My first three years of general practice will guide where I ultimately choose to focus.
-        </p>
-      </div>
-    </div>
     <div class="resume-link-wrap">
       <a class="resume-link" href="Joy_Johnson_resume.docx" download>
         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -685,13 +736,51 @@
     </div>
   </section>
 
+  <!-- INFLUENTIAL ARTICLE -->
+  <section id="article" style="background: var(--warm-white);">
+    <p class="section-label">Reading &amp; Reflection</p>
+    <h2 class="section-title">Influential <em>Article</em></h2>
+    <div class="artifact-card" style="max-width: 780px; border-color: var(--sage-light);">
+      <span class="artifact-tag sage">Article</span>
+      <h3 class="artifact-title">The Dimensions of Common Factors in Counseling</h3>
+      <p class="artifact-desc" style="margin-bottom: 1.25rem;">
+        This article, exploring how the common factors model explains counseling's effectiveness, offered guidance and comfort to me when starting clinical practice. My supervisor referred me to the common factors research during practicum and encouraged me to focus on the therapeutic relationship as the most significant aspect of the counseling process that I could influence. The emphasis on the therapeutic alliance is personally grounding and seems attainable even as a novice clinical mental health counselor. In addition to providing focus, the article also informed my conceptualization of my role as a counselor. Leibert's viewpoint that the client is the agent of change and that the counselor's role is to facilitate the client's self-healing and personal growth process resonates strongly with my own person-centered beliefs. Finally, I appreciate the article's plethora of practical and evidence-based recommendations. I was particularly struck by the following insights and conclusions from the article:
+      </p>
+      <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; display: flex; flex-direction: column; gap: 0.85rem;">
+        <li style="display: flex; gap: 0.75rem; font-size: 0.82rem; line-height: 1.7; color: var(--text-light);">
+          <span style="color: var(--sage-dark); flex-shrink: 0; margin-top: 0.15rem;">&#9670;</span>
+          <span>Structured self-expressive activities facilitate healing.</span>
+        </li>
+        <li style="display: flex; gap: 0.75rem; font-size: 0.82rem; line-height: 1.7; color: var(--text-light);">
+          <span style="color: var(--sage-dark); flex-shrink: 0; margin-top: 0.15rem;">&#9670;</span>
+          <span>Hope can be conceptualized as a combination of pathways thinking (understanding the method to reach a goal) and agency thinking (belief in one's self-efficacy in creating personal change).</span>
+        </li>
+        <li style="display: flex; gap: 0.75rem; font-size: 0.82rem; line-height: 1.7; color: var(--text-light);">
+          <span style="color: var(--sage-dark); flex-shrink: 0; margin-top: 0.15rem;">&#9670;</span>
+          <span>While the client-counselor alliance is idiosyncratic, there are some universal attributes that contribute to the bond, including active listening, empathy, respect for the client and their perception of problem severity, and non-judgment. On the other hand, clients respond with variable degrees of preference to advice, directiveness, open-ended questions, interpretations, and self-disclosure.</span>
+        </li>
+        <li style="display: flex; gap: 0.75rem; font-size: 0.82rem; line-height: 1.7; color: var(--text-light);">
+          <span style="color: var(--sage-dark); flex-shrink: 0; margin-top: 0.15rem;">&#9670;</span>
+          <span>Providing clients with a credible structure to address their problems may function therapeutically by instilling hope and strengthening the therapeutic alliance more so than the particular intervention itself. Specific schools of counseling and techniques are generally equivalent in terms of effectiveness except for some highly specific presenting concerns.</span>
+        </li>
+      </ul>
+      <a class="resume-link" href="Common_Factors.pdf" download style="margin-top: 0.25rem; display: inline-flex;">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+          <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+        </svg>
+        Download Article
+      </a>
+    </div>
+  </section>
+
   <!-- ARTIFACTS -->
   <section id="artifacts">
     <p class="section-label">Portfolio</p>
     <h2 class="section-title">Portfolio <em>Artifacts</em></h2>
 
     <!-- SUBSECTION 1: Portfolio Artifacts by Program Objective -->
-    <div class="artifacts-subsection">
+    <div class="artifacts-subsection" id="artifacts-objective">
       <h3 class="subsection-title">Portfolio Artifacts by <em>Program Objective</em></h3>
       <p class="subsection-desc">
         The following artifacts are organized by the five core program objectives of my graduate training. Each objective is represented by three artifacts that demonstrate competency, growth, and professional development across the domains of ethical practice, lifelong learning, community leadership, self-awareness, and compassionate service.
@@ -931,7 +1020,7 @@
     <div class="section-divider"></div>
 
     <!-- SUBSECTION 2: Artifacts Pertinent to Professional Practice -->
-    <div class="artifacts-subsection">
+    <div class="artifacts-subsection" id="artifacts-practice">
       <h3 class="subsection-title">Artifacts Pertinent to <em>Professional Practice</em></h3>
       <p class="subsection-desc">
         The following four areas represent critical competencies in professional mental health practice. Each section highlights targeted training, applied work, and reflective scholarship in domains central to safe, ethical, and effective clinical service.
