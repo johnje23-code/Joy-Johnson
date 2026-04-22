@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practice Artifacts | Joy Johnson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .artifacts-section { padding: 4rem 5rem; }
+    .subsection-desc {
+      font-size: 0.88rem; line-height: 1.75; color: var(--text-mid);
+      max-width: 680px; margin-bottom: 3rem;
+    }
+    .professional-practice-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
+    }
+    .practice-card {
+      background: var(--warm-white);
+      padding: 2rem;
+      border: 1px solid var(--sage-light);
+      border-left: 3px solid var(--sage-dark);
+      transition: all 0.3s;
+    }
+    .practice-card:hover {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+    }
+    .practice-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 400;
+      color: var(--text-dark); margin-bottom: 1.25rem;
+      line-height: 1.3;
+    }
+    @media (max-width: 900px) {
+      .professional-practice-grid { grid-template-columns: 1fr; }
+      .artifacts-section { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="index.html">Joy Johnson</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="goals.html">Professional Development</a></li>
+      <li><a href="article.html">Influential Article</a></li>
+      <li class="nav-dropdown">
+        <a href="artifacts-objectives.html">Program Artifacts</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="artifacts-objectives.html#objective-1">Objective 1 — Practice Effectively &amp; Ethically</a></li>
+          <li><a href="artifacts-objectives.html#objective-2">Objective 2 — Professional Diligence &amp; Lifelong Learning</a></li>
+          <li><a href="artifacts-objectives.html#objective-3">Objective 3 — Community Leaders &amp; Advocates</a></li>
+          <li><a href="artifacts-objectives.html#objective-4">Objective 4 — Self-Awareness &amp; Impact</a></li>
+          <li><a href="artifacts-objectives.html#objective-5">Objective 5 — Compassionate Service</a></li>
+        </ul>
+      </li>
+      <li><a href="artifacts-practice.html" class="active">Practice Artifacts</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label">Portfolio</p>
+    <h1 class="section-title">Artifacts Pertinent to <em>Professional Practice</em></h1>
+  </div>
+
+  <section class="artifacts-section">
+    <p class="subsection-desc">
+      The following four areas represent critical competencies in professional mental health practice. Each section highlights targeted training, applied work, and reflective scholarship in domains central to safe, ethical, and effective clinical service.
+    </p>
+
+    <div class="professional-practice-grid">
+
+      <!-- Suicide Assessment and Intervention -->
+      <div class="practice-card">
+        <h3 class="practice-card-title">Suicide Assessment &amp; Intervention</h3>
+        <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+          <div class="artifact-card">
+            <span class="artifact-tag sage">Risk Assessment &amp; Safety Plan</span>
+            <h3 class="artifact-title">Suicide and Serious Mental Illness: An Overview of Considerations, Assessment, and Safety Planning</h3>
+            <p class="artifact-desc">This artifact is an excellent resource that summarizes considerations relevant to suicide risk assessment and safety planning. Responding to clients with potential suicidal ideation according to recommended best practices is essential to promote client safety. This is a critical skill I need to practice ethically and legally in the group practice I hope to join.</p>
+            <a class="resume-link" href="https://sprc.org/wp-content/uploads/SPRC-SMI-Adviser-Suicide-and-Serious-Mental-Illness.pdf" target="_blank" rel="noopener noreferrer" style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5H12M8.5 4L12 7.5L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              View Resource
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ethical Decision-Making -->
+      <div class="practice-card">
+        <h3 class="practice-card-title">Ethical Decision-Making</h3>
+        <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+          <div class="artifact-card">
+            <span class="artifact-tag">Ethics</span>
+            <h3 class="artifact-title">Practitioner's Guide to Ethical Decision Making &amp; The ACA Code of Ethics</h3>
+            <p class="artifact-desc">These artifacts are essential references to ensure I am practicing within ethical mandates. The Practitioner's Guide provides a framework for structuring the decision-making process, which is important for protecting both clients and me as a clinical mental health practitioner. It is also vital to review the ACA Code of Ethics when facing ethical dilemmas.</p>
+            <a class="resume-link" href="https://www.counseling.org/docs/default-source/ethics/practioner-39-s-guide-to-ethical-decision-making.pdf" target="_blank" rel="noopener noreferrer" style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5H12M8.5 4L12 7.5L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Practitioner's Guide to Ethical Decision Making
+            </a>
+            <a class="resume-link" href="https://www.counseling.org/docs/default-source/default-document-library/ethics/2014-aca-code-of-ethics.pdf" target="_blank" rel="noopener noreferrer" style="margin-top: 0.75rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5H12M8.5 4L12 7.5L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              The ACA Code of Ethics
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trauma-Informed Clinical Practice -->
+      <div class="practice-card">
+        <h3 class="practice-card-title">Trauma-Informed Clinical Practice</h3>
+        <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+          <div class="artifact-card">
+            <span class="artifact-tag sage">Training</span>
+            <h3 class="artifact-title">Foundations of Trauma-Informed Therapy Practices</h3>
+            <p class="artifact-desc">This artifact is a highly informative resource for foundational knowledge about the causes and consequences of trauma, trauma-related disorders, and trauma-informed approaches to clinical care. The widespread prevalence of trauma necessitates that I have an understanding of how trauma may impact clients and how to respond through a trauma-informed lens.</p>
+            <a class="resume-link" href="https://courses.elevatece.com/courses/foundations-of-trauma-informed-therapy-practices" target="_blank" rel="noopener noreferrer" style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5H12M8.5 4L12 7.5L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              View Resource
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Positive Psychotherapy Interventions -->
+      <div class="practice-card">
+        <h3 class="practice-card-title">Positive Psychotherapy Interventions</h3>
+        <div class="artifacts-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+          <div class="artifact-card">
+            <span class="artifact-tag">Strength-Based</span>
+            <h3 class="artifact-title">Positive Psychotherapy: Helping People Thrive</h3>
+            <p class="artifact-desc">This artifact includes demonstrations of eight positive psychotherapy techniques to promote client well-being. This is an excellent resource for broadly applicable interventions to help clients heal and grow. I anticipate many of these interventions will be relevant to the clients I encounter in future practice and are consistent with my strength-based approach to clinical mental health counseling.</p>
+            <a class="resume-link" href="https://video-alexanderstreet-com.wake.idm.oclc.org/watch/positive-psychotherapy-helping-people-thrive?context=channel%3Acounseling-and-therapy-in-video" target="_blank" rel="noopener noreferrer" style="margin-top: 1.25rem; display: inline-flex;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5H12M8.5 4L12 7.5L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              View Resource
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <div class="footer-name">Joy Johnson</div>
+      <div class="footer-tagline">LCMHCA Candidate &nbsp;·&nbsp; North Carolina</div>
+    </div>
+    <div class="footer-note">
+      This eportfolio is a living document reflecting<br>
+      my growth as a developing clinician.<br>
+      <span style="color: var(--sage); margin-top: 0.5rem; display:block;">Change is possible.</span>
+    </div>
+  </footer>
+</body>
+</html>

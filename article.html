@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Influential Article | Joy Johnson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .article-section { padding: 4rem 5rem; }
+    .article-card {
+      max-width: 780px;
+      background: var(--warm-white);
+      padding: 2rem;
+      border: 1px solid var(--sage-light);
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .article-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--sage), var(--clay));
+    }
+    .article-desc { font-size: 0.88rem; line-height: 1.75; color: var(--text-mid); margin-bottom: 1.25rem; }
+    .insight-list { list-style: none; padding: 0; margin: 0 0 1.25rem 0; display: flex; flex-direction: column; gap: 0.85rem; }
+    .insight-list li { display: flex; gap: 0.75rem; font-size: 0.82rem; line-height: 1.7; color: var(--text-light); }
+    .insight-list li span:first-child { color: var(--sage-dark); flex-shrink: 0; margin-top: 0.15rem; }
+    @media (max-width: 900px) { .article-section { padding: 3rem 1.5rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="index.html">Joy Johnson</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="goals.html">Professional Development</a></li>
+      <li><a href="article.html" class="active">Influential Article</a></li>
+      <li class="nav-dropdown">
+        <a href="artifacts-objectives.html">Program Artifacts</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="artifacts-objectives.html#objective-1">Objective 1 — Practice Effectively &amp; Ethically</a></li>
+          <li><a href="artifacts-objectives.html#objective-2">Objective 2 — Professional Diligence &amp; Lifelong Learning</a></li>
+          <li><a href="artifacts-objectives.html#objective-3">Objective 3 — Community Leaders &amp; Advocates</a></li>
+          <li><a href="artifacts-objectives.html#objective-4">Objective 4 — Self-Awareness &amp; Impact</a></li>
+          <li><a href="artifacts-objectives.html#objective-5">Objective 5 — Compassionate Service</a></li>
+        </ul>
+      </li>
+      <li><a href="artifacts-practice.html">Practice Artifacts</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label">Reading &amp; Reflection</p>
+    <h1 class="section-title">Influential <em>Article</em></h1>
+  </div>
+
+  <section class="article-section">
+    <div class="article-card">
+      <span class="artifact-tag sage">Article</span>
+      <h3 class="artifact-title">The Dimensions of Common Factors in Counseling</h3>
+      <p class="article-desc">
+        This article, exploring how the common factors model explains counseling's effectiveness, offered guidance and comfort to me when starting clinical practice. My supervisor referred me to the common factors research during practicum and encouraged me to focus on the therapeutic relationship as the most significant aspect of the counseling process that I could influence. The emphasis on the therapeutic alliance is personally grounding and seems attainable even as a novice clinical mental health counselor. In addition to providing focus, the article also informed my conceptualization of my role as a counselor. Leibert's viewpoint that the client is the agent of change and that the counselor's role is to facilitate the client's self-healing and personal growth process resonates strongly with my own person-centered beliefs. Finally, I appreciate the article's plethora of practical and evidence-based recommendations. I was particularly struck by the following insights and conclusions from the article:
+      </p>
+      <ul class="insight-list">
+        <li>
+          <span>&#9670;</span>
+          <span>Structured self-expressive activities facilitate healing.</span>
+        </li>
+        <li>
+          <span>&#9670;</span>
+          <span>Hope can be conceptualized as a combination of pathways thinking (understanding the method to reach a goal) and agency thinking (belief in one's self-efficacy in creating personal change).</span>
+        </li>
+        <li>
+          <span>&#9670;</span>
+          <span>While the client-counselor alliance is idiosyncratic, there are some universal attributes that contribute to the bond, including active listening, empathy, respect for the client and their perception of problem severity, and non-judgment. On the other hand, clients respond with variable degrees of preference to advice, directiveness, open-ended questions, interpretations, and self-disclosure.</span>
+        </li>
+        <li>
+          <span>&#9670;</span>
+          <span>Providing clients with a credible structure to address their problems may function therapeutically by instilling hope and strengthening the therapeutic alliance more so than the particular intervention itself. Specific schools of counseling and techniques are generally equivalent in terms of effectiveness except for some highly specific presenting concerns.</span>
+        </li>
+      </ul>
+      <a class="resume-link" href="Common_Factors.pdf" download style="margin-top: 0.25rem; display: inline-flex;">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+          <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+        </svg>
+        Download Article
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <div class="footer-name">Joy Johnson</div>
+      <div class="footer-tagline">LCMHCA Candidate &nbsp;·&nbsp; North Carolina</div>
+    </div>
+    <div class="footer-note">
+      This eportfolio is a living document reflecting<br>
+      my growth as a developing clinician.<br>
+      <span style="color: var(--sage); margin-top: 0.5rem; display:block;">Change is possible.</span>
+    </div>
+  </footer>
+</body>
+</html>

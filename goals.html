@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional Development | Joy Johnson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .goals-section { padding: 7rem 5rem 5rem; }
+    .goals-intro {
+      max-width: 860px; margin-bottom: 4rem;
+      font-size: 1rem; line-height: 1.85; color: var(--text-mid);
+    }
+    .goals-timeline {
+      position: relative;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+    }
+    .goals-timeline::before {
+      content: '';
+      position: absolute; top: 2rem; left: 10%; right: 10%;
+      height: 1px; background: var(--sage-light); z-index: 0;
+    }
+    .goal-card {
+      position: relative; z-index: 1;
+      background: var(--cream);
+      padding: 2.5rem 2rem;
+      border-bottom: 3px solid var(--sage);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .goal-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(122,158,118,0.12);
+    }
+    .goal-dot {
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--sage-dark); margin-bottom: 1.5rem;
+      box-shadow: 0 0 0 4px var(--sage-light);
+    }
+    .goal-period {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--clay);
+      margin-bottom: 0.8rem;
+    }
+    .goal-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 400;
+      color: var(--text-dark); margin-bottom: 1rem; line-height: 1.3;
+    }
+    .goal-desc { font-size: 0.85rem; line-height: 1.75; color: var(--text-mid); }
+    @media (max-width: 900px) {
+      .goals-timeline { grid-template-columns: 1fr; }
+      .goals-timeline::before { display: none; }
+      .goals-section { padding: 4rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="index.html">Joy Johnson</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="goals.html" class="active">Professional Development</a></li>
+      <li><a href="article.html">Influential Article</a></li>
+      <li class="nav-dropdown">
+        <a href="artifacts-objectives.html">Program Artifacts</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="artifacts-objectives.html#objective-1">Objective 1 — Practice Effectively &amp; Ethically</a></li>
+          <li><a href="artifacts-objectives.html#objective-2">Objective 2 — Professional Diligence &amp; Lifelong Learning</a></li>
+          <li><a href="artifacts-objectives.html#objective-3">Objective 3 — Community Leaders &amp; Advocates</a></li>
+          <li><a href="artifacts-objectives.html#objective-4">Objective 4 — Self-Awareness &amp; Impact</a></li>
+          <li><a href="artifacts-objectives.html#objective-5">Objective 5 — Compassionate Service</a></li>
+        </ul>
+      </li>
+      <li><a href="artifacts-practice.html">Practice Artifacts</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label">Professional Development</p>
+    <h1 class="section-title">A roadmap for <em>growth</em></h1>
+  </div>
+
+  <section class="goals-section">
+    <p class="goals-intro">
+      After graduation, I plan to practice clinically at an established group practice. To be eligible to do so, I will finalize my application for my associate licensure with the NC Board of Licensed Clinical Mental Health Counselors upon conferral of my degree. I will also seek employment opportunities that will allow me to work with diverse client populations and expose me to a network of experienced mental health clinicians from whom I can learn. My goal for my first year of practice is to increase my clinical competency by identifying and pursuing continuing education in focused areas of professional interest and by integrating feedback from my supervisor. Some potential areas for continuing education I am considering include motivational interviewing, EMDR, and dialectical behavior therapy. However, I want to learn from my first year of clinical practice to determine what skills would be most relevant to my work moving forward. By year three, my goal is to begin to solidify my professional identity as a fully licensed clinical mental health counselor. I envision myself as a generalist, treating clients across a broad range of presenting concerns. However, I would also like to cultivate specialized expertise in a few select areas, allowing me to practice with both depth and breadth. As of now, two populations of interest are older adults and those with disabilities.
+    </p>
+
+    <div class="goals-timeline">
+      <div class="goal-card">
+        <div class="goal-dot"></div>
+        <p class="goal-period">Upon Graduation</p>
+        <h3 class="goal-title">Associate Licensure &amp; First Position</h3>
+        <p class="goal-desc">Finalize application for LCMHCA with the NC Board of Licensed Clinical Mental Health Counselors. Seek employment at a group practice offering diverse client populations and mentorship from experienced clinicians.</p>
+      </div>
+      <div class="goal-card">
+        <div class="goal-dot"></div>
+        <p class="goal-period">Year One</p>
+        <h3 class="goal-title">Clinical Competency &amp; Continuing Education</h3>
+        <p class="goal-desc">Increase clinical competency through targeted continuing education — potentially including motivational interviewing, EMDR, and dialectical behavior therapy — guided by supervisor feedback and real-world client needs.</p>
+      </div>
+      <div class="goal-card">
+        <div class="goal-dot"></div>
+        <p class="goal-period">Year Three</p>
+        <h3 class="goal-title">Full Licensure &amp; Specialization</h3>
+        <p class="goal-desc">Obtain LCMHC licensure and solidify professional identity as a generalist with cultivated expertise. Pursue Medicare credentialing to serve older adults and people with disabilities, if interest persists after early practice years.</p>
+      </div>
+    </div>
+
+    <div class="resume-link-wrap">
+      <a class="resume-link" href="Joy_Johnson_resume.docx" download>
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+          <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+        </svg>
+        Download My Resume
+      </a>
+      <span class="resume-link-label">Joy Johnson — LCMHCA Candidate</span>
+    </div>
+    <div class="resume-link-wrap" style="margin-top: 1rem;">
+      <a class="resume-link" href="Professional_disclosure_statement.docx" download>
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.5 10.5L3.5 6.5H6V1.5H9V6.5H11.5L7.5 10.5Z" fill="currentColor"/>
+          <path d="M2 12.5H13V13.5H2V12.5Z" fill="currentColor"/>
+        </svg>
+        Download My Professional Disclosure Statement
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <div class="footer-name">Joy Johnson</div>
+      <div class="footer-tagline">LCMHCA Candidate &nbsp;·&nbsp; North Carolina</div>
+    </div>
+    <div class="footer-note">
+      This eportfolio is a living document reflecting<br>
+      my growth as a developing clinician.<br>
+      <span style="color: var(--sage); margin-top: 0.5rem; display:block;">Change is possible.</span>
+    </div>
+  </footer>
+</body>
+</html>
